@@ -20,153 +20,65 @@ export const ordenarFiguras = (puntuacionOrdenada) => {
     dos.className = "element";
     tres.className = "element";
     cuatro.className = "element";
-
-    // Nos permite repintar la pantalla después de cada puntuación.
+    // Nos permite repintar la pantalla después de cada puntuación y según la puntuación obtenida, ordenamos
+    // las figuras.
     window.requestAnimationFrame(() => {
         window.requestAnimationFrame(() => {
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "vue") {
-                uno.className = "element uno";
-                dos.className = "element dos";
-                tres.className = "element tres";
-                cuatro.className = "element cuatro";
+            let posicionUno = puntuacionOrdenada[0].nombre;
+            switch(posicionUno) {
+                case "angular":
+                    uno.className = "element uno";
+                    break;
+                case "react":
+                    dos.className = "element uno";
+                    break;
+                case "svelte":
+                    tres.className = "element uno";
+                    break;
+                default:
+                    cuatro.className = "element uno";
             };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "vue") {
-                dos.className = "element uno";
-                uno.className = "element dos";
-                tres.className = "element tres";
-                cuatro.className = "element cuatro";
+            let posicionDos = puntuacionOrdenada[1].nombre;
+            switch (posicionDos) {
+                case "angular":
+                    uno.className = "element dos";
+                    break;
+                case "react":
+                    dos.className = "element dos";
+                    break;
+                case "svelte":
+                    tres.className = "element dos";
+                    break;
+                default:
+                    cuatro.className = "element dos";
             };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "vue") {
-                dos.className = "element uno";
-                tres.className = "element dos";
-                uno.className = "element tres";
-                cuatro.className = "element cuatro";
+            let posicionTres = puntuacionOrdenada[2].nombre;
+            switch (posicionTres) {
+                case "angular":
+                    uno.className = "element tres";
+                    break;
+                case "react":
+                    dos.className = "element tres";
+                    break;
+                case "svelte":
+                    tres.className = "element tres";
+                    break;
+                default:
+                    cuatro.className = "element tres";
             };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "angular") {
-                dos.className = "element uno";
-                tres.className = "element dos";
-                cuatro.className = "element tres";
-                uno.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "vue") {
-                uno.className = "element uno";
-                tres.className = "element dos";
-                dos.className = "element tres";
-                cuatro.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "react") {
-                uno.className = "element uno";
-                tres.className = "element dos";
-                cuatro.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "svelte") {
-                uno.className = "element uno";
-                dos.className = "element dos";
-                cuatro.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "vue") {
-                tres.className = "element uno";
-                uno.className = "element dos";
-                dos.className = "element tres";
-                cuatro.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "vue") {
-                tres.className = "element uno";
-                dos.className = "element dos";
-                uno.className = "element tres";
-                cuatro.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "angular") {
-                tres.className = "element uno";
-                dos.className = "element dos";
-                cuatro.className = "element tres";
-                uno.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "react") {
-                tres.className = "element uno";
-                uno.className = "element dos";
-                cuatro.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "react") {
-                tres.className = "element uno";
-                cuatro.className = "element dos";
-                uno.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "svelte" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "angular") {
-                tres.className = "element uno";
-                cuatro.className = "element dos";
-                dos.className = "element tres";
-                uno.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "svelte") {
-                uno.className = "element uno";
-                cuatro.className = "element dos";
-                dos.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "angular" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "react") {
-                uno.className = "element uno";
-                cuatro.className = "element dos";
-                tres.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "svelte") {
-                cuatro.className = "element uno";
-                uno.className = "element dos";
-                dos.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "svelte") {
-                cuatro.className = "element uno";
-                dos.className = "element dos";
-                uno.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "react" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "angular") {
-                cuatro.className = "element uno";
-                dos.className = "element dos";
-                tres.className = "element tres";
-                uno.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "react") {
-                cuatro.className = "element uno";
-                uno.className = "element dos";
-                tres.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "react") {
-                cuatro.className = "element uno";
-                tres.className = "element dos";
-                uno.className = "element tres";
-                dos.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "vue" & puntuacionOrdenada[1].nombre === "svelte" & puntuacionOrdenada[2].nombre === "react" & puntuacionOrdenada[3].nombre === "angular") {
-                cuatro.className = "element uno";
-                tres.className = "element dos";
-                dos.className = "element tres";
-                uno.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "angular" & puntuacionOrdenada[2].nombre === "vue" & puntuacionOrdenada[3].nombre === "svelte") {
-                dos.className = "element uno";
-                uno.className = "element dos";
-                cuatro.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "angular" & puntuacionOrdenada[3].nombre === "svelte") {
-                dos.className = "element uno";
-                cuatro.className = "element dos";
-                uno.className = "element tres";
-                tres.className = "element cuatro";
-            };
-            if (puntuacionOrdenada[0].nombre === "react" & puntuacionOrdenada[1].nombre === "vue" & puntuacionOrdenada[2].nombre === "svelte" & puntuacionOrdenada[3].nombre === "angular") {
-                dos.className = "element uno";
-                cuatro.className = "element dos";
-                tres.className = "element tres";
-                uno.className = "element cuatro";
+            let posicionCuatro = puntuacionOrdenada[3].nombre;
+            switch (posicionCuatro) {
+                case "angular":
+                    uno.className = "element cuatro";
+                    break;
+                case "react":
+                    dos.className = "element cuatro";
+                    break;
+                case "svelte":
+                    tres.className = "element cuatro";
+                    break;
+                default:
+                    cuatro.className = "element cuatro";
             };
         });
     });
