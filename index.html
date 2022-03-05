@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <div class="menu__logo">
+                <h1>App</h1>
+            </div>
+            <div class="menu__enlaces">
+                <a class="menu__enlace" href="#">Inicia sesión</a>
+                <a class="menu__enlace" href="#">Regístrate</a>
+            </div>
+        </div>
+    </header>
+    <div class="cabecera">
+        <h1 class="cabecera__titulo">Elige tu framework favorito</h1>
+    </div>
+    <div class="container">
+        <div class="elements">
+        <div id="uno" class="element">
+            <img class="element__img" src="/images/angular-icon.svg" alt="Angular" />Angular
+            <p id="parrafo__uno" class="element__parrafo">0</p>
+        </div>
+        <div id="dos" class="element">
+            <img class="element__img" src="/images/react.svg" alt="React" />React
+            <p id="parrafo__dos" class="element__parrafo">0</p>
+        </div>
+        <div id="tres" class="element">
+            <img class="element__img" src="/images/svelte-icon.svg" alt="Svelte" />Svelte
+            <p id="parrafo__tres" class="element__parrafo">0</p>
+        </div>
+        <div id="cuatro" class="element">
+            <img class="element__img" src="/images/vue.svg" alt="Vue" />Vue
+            <p id="parrafo__cuatro" class="element__parrafo">0</p>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h1 class="panel__titulo">Vota</h1>
+        <div class="panel__botones">
+            <a id="boton__uno" class="panel__boton" href="#">Angular</a>
+            <a id="boton__dos" class="panel__boton" href="#">React</a>
+            <a id="boton__tres" class="panel__boton" href="#">Svelte</a>
+            <a id="boton__cuatro" class="panel__boton" href="#">Vue</a>
+        </div>
+    </div>
+    </div>
+    <script src="/script.js" type="module"></script>
+</body>
+
+</html>

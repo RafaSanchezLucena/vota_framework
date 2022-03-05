@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(15, 15, 15);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgb(15, 15, 15);
+}
+
+.menu {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    color: #fff;
+    height: 30px;
+    position: fixed;
+}
+
+.menu__logo {
+    margin: 0 50px;
+}
+
+.menu__enlaces {
+    margin-right: 40px;
+}
+
+.menu__enlace {
+    margin: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color:#fff;
+}
+
+.menu__enlace:hover {
+    color: rgb(60, 111, 189);
+}
+
+
+.cabecera {
+    text-align: center;
+    padding: 1em;
+    height: 100px;
+    background-color:rgb(15, 15, 15);
+}
+
+.cabecera__titulo {
+    margin: 50px;
+    color:darkorange;
+    font-size: 50px;
+}
+
+.panel {
+    width: 38%;
+    height: 680px;
+    margin-top: 3rem;
+    border: 2px solid darkorange;
+    background-color:azure;
+    background-color:rgb(15, 15, 15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel__titulo {
+    margin-top: 3rem;
+    color: crimson;
+    font-size: 40px;
+}
+
+.panel__botones {
+    width: 70%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.panel__boton {
+    display:inline-block;
+    text-decoration: none;
+    text-align: center;
+    color:#fff;
+    font-size: 25px;
+    background-color: crimson;
+    padding: 1rem;
+    width: 100%;
+    margin:15px;
+    border-radius: 15px;
+}
+
+.elements {
+    width: 40%;
+    height: 680px;
+    margin-top: 3rem;
+    padding: 30px;
+    border: 2px solid darkorange;
+    background-color: rgb(15, 15, 15);
+    position: relative;
+}
+
+.element {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: azure;
+    position:absolute;
+}
+
+
+.element__img {
+    width: 80%;
+    height: 50%;
+}
+
+.element__parrafo {
+    border: 0.5px solid #000;
+    padding: 0.2rem 0.8rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    background-color:crimson;
+    color: #fff;
+    font-size: 18px;
+}
+
+.uno {
+    position:absolute;
+    animation-name: posicionUno;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.dos {
+    position: absolute;
+    animation-name: posicionDos;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+}
+
+.tres {
+    position: absolute;
+    animation-name: posicionTres;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 3;
+}
+
+.cuatro {
+    position: absolute;
+    animation-name: posicionCuatro;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    z-index: 4;
+}
+
+
+@keyframes posicionUno {
+    from {
+        top: 20px;
+    }
+    
+    to {
+        top: 20px;
+    }
+    
+}
+
+@keyframes posicionDos {
+    from {
+        top: 20px;
+    }
+
+    to {
+        top: 180px;
+    }
+
+}
+
+@keyframes posicionTres {
+    from {
+        top: 20px;
+    }
+
+    to {
+        top: 340px;
+    }
+
+}
+
+@keyframes posicionCuatro {
+    from {
+        top: 20px;
+    }
+
+    100% {
+        top: 500px;
+    }
+}
+
+/* @keyframes posicionCuatro {
+    0%{
+        top: 20px;
+        left: 30px;
+    }
+
+    33% {
+        left: 300px;
+        top: 20px;
+    }
+
+    66% {
+        left: 300px;
+        top: 500px;
+    }
+    100% {
+        left: 30px;
+        top: 500px;
+    }
+
+    
+} */
