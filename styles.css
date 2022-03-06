@@ -43,7 +43,7 @@ body {
 }
 
 .menu__enlace:hover {
-    color: rgb(60, 111, 189);
+    color:blue;
 }
 
 
@@ -66,7 +66,6 @@ body {
     height: 680px;
     margin-top: 3rem;
     border: 2px solid darkorange;
-    background-color:azure;
     background-color:rgb(15, 15, 15);
     display: flex;
     flex-direction: column;
@@ -98,6 +97,11 @@ body {
     width: 100%;
     margin:15px;
     border-radius: 15px;
+    transition: background-color .5s;
+}
+
+.panel__boton:hover {
+    background-color:purple;
 }
 
 .elements {
